@@ -1,0 +1,26 @@
+using System;
+
+namespace_321
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("n =");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int p = 0;
+            int s = 0;
+            for (int i = 1; i <= n; ++i)
+            {
+                if (i % 2 == 0)
+                {
+                    s += i;
+                    p += 1;
+                }
+            }
+            Console.WriteLine("Количество чисел делящихся на 2 = {0}", p);
+            Console.WriteLine("Сумма чисел делящихся на 2 = {0}", s);
+            Console.ReadLine();
+        }
+    }
+}
