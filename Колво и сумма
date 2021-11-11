@@ -1,0 +1,24 @@
+using System;
+
+public class Class1
+{
+	public Class1()
+	{
+		Console.WriteLine("Эта программа считает количества и сумму парных чисел в диапазоне от 1 до N.");
+		Console.Write("Введите n - ");
+		int n = Convert.ToInt32(Console.ReadLine());
+		int s = 0;
+		int c = 0;
+
+		for (int i = 2; i <= n; i = i + 2)
+        {
+			count++;
+			summ += i;
+        }
+
+		Console.WriteLine($"{c} - количество парных чисел в диапозоне от 1 до N");
+		Console.WriteLine($"{s} - сумма парных чисел в диапозоне от 1 до N");
+
+		Console.ReadLine();
+	}
+}
