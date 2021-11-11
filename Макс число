@@ -1,0 +1,28 @@
+using System;
+
+namespace _111
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float x, y, z;
+            Console.WriteLine("введите 3 числа");
+            x = (float)Convert.ToDouble(Console.ReadLine());
+            y = (float)Convert.ToDouble(Console.ReadLine());
+            z = (float)Convert.ToDouble(Console.ReadLine());
+            if ((x > y) & (x > z))
+            {
+                Console.WriteLine("Максимальное число = {0}", x);
+            }
+            else if ((y > z) & (y > x))
+            {
+                Console.WriteLine("Максимальное число = {0}", y);
+            }
+            else if ((z > x) & (z > y))
+            {
+                Console.WriteLine("Максимальное число = {0}", z);
+            }
+        }
+    }
+}
