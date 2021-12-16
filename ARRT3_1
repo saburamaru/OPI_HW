@@ -1,0 +1,55 @@
+using System;
+
+namespace ConsoleApp33
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 0;
+            while (true)
+            {
+                Console.WriteLine("Введите длину массива :");
+                var str = Console.ReadLine();
+                if (int.TryParse(str, out n))
+                    break;
+                else
+                {
+                    Console.WriteLine("ДАННЫЕ НЕ КОРРЕКТНЫ ! ! ! ");
+
+                }
+            }
+            int [] arr = new int [n];
+            int min = 10000000;
+            int ind = -1;
+            for (int i = 0; i < n; i++)
+            {
+                while (true)
+                {
+                    Console.WriteLine($"Введите элемент № {i+1} :");
+                    var str = Console.ReadLine();
+                    if (int.TryParse(str, out arr[i]))
+                    {
+                        if (arr[i]<min)
+                        {
+                            min = arr[i];
+                            ind = i;
+                        }
+                        break;
+                    }
+                        
+                    else
+                    {
+                        Console.WriteLine("ДАННЫЕ НЕ КОРРЕКТНЫ ! ! ! ");
+
+                    }
+                }
+            }
+
+            Console.WriteLine($"Min = {min}\nЕго индекс = {ind}");
+            
+            
+            Console.ReadKey();
+        }
+    }
+}
