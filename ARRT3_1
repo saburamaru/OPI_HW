@@ -1,0 +1,57 @@
+using System;
+
+namespace ConsoleApp33
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 0;
+            while (true)
+            {
+                Console.WriteLine("Введите длину массива :");
+                var str = Console.ReadLine();
+                if (int.TryParse(str, out n))
+                    break;
+                else
+                {
+                    Console.WriteLine("ДАННЫЕ НЕ КОРРЕКТНЫ ! ! ! ");
+
+                }
+            }
+            int [] d = new int [n];
+            int sum = 0;
+            for (int i = 0; i < n; i++)
+            {
+                while (true)
+                {
+                    Console.WriteLine($"Введите элемент № {i+1} :");
+                    var str = Console.ReadLine();
+                    if (int.TryParse(str, out d[i]))
+                    {
+                        if (i%2==1)
+                        {
+                            sum+=d[i];
+                        }      
+                        break;
+                    }
+                        
+                    else
+                    {
+                        Console.WriteLine("ДАННЫЕ НЕ КОРРЕКТНЫ ! ! ! ");
+
+                    }
+                }
+            }
+            Console.WriteLine($"Сумма элементов с нечетыми индексами = {sum}");
+            foreach (var el in d)
+            {
+                Console.Write($"{el} ");
+            }
+            
+            
+            
+            Console.ReadKey();
+        }
+    }
+}
